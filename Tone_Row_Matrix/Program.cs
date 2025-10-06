@@ -176,7 +176,7 @@ namespace Tone_Row_Matrix
             sb.Append("|   |");
             for (int j = 0; j < 12; j++)
             {
-                int rLabel = _matrix[11, 11 - j].Value;
+                int rLabel = _matrix[11, 0].IntervalTo(_matrix[11, j]);
                 sb.Append($" R{rLabel:D2} |");
             }
             sb.AppendLine("   |");
@@ -220,7 +220,7 @@ namespace Tone_Row_Matrix
             Console.Write("    ");
             for (int j = 0; j < 12; j++)
             {
-                int rLabel = _matrix[11, 11 - j].Value;
+                int rLabel = _matrix[11, 0].IntervalTo(_matrix[11, j]);
                 Console.Write($"R{rLabel:D2}  ");
             }
             Console.WriteLine();
