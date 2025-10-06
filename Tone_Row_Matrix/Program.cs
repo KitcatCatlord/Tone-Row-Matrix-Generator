@@ -143,7 +143,7 @@ namespace Tone_Row_Matrix
             
             sb.AppendLine("# Twelve-Tone Matrix");
             sb.AppendLine();
-            sb.AppendLine($"**Prime Row (P0):** {string.Join(" ", _originalRow)}");
+            sb.AppendLine($"**Prime Row (P0):** {string.Join(" ", (IEnumerable<Note>)_originalRow)}");
             sb.AppendLine();
 
             sb.Append("|   |");
@@ -194,7 +194,7 @@ namespace Tone_Row_Matrix
         public void PrintMatrix()
         {
             Console.WriteLine("\nTwelve-Tone Matrix:");
-            Console.WriteLine($"Prime Row (P0): {string.Join(" ", _originalRow)}");
+            Console.WriteLine($"Prime Row (P0): {string.Join(" ", (IEnumerable<Note>)_originalRow)}");
             Console.WriteLine();
 
             Console.Write("    ");
@@ -302,7 +302,7 @@ namespace Tone_Row_Matrix
                         continue;
                     }
 
-                    Console.WriteLine($"\nParsed tone row: {string.Join(" ", notes)}");
+                    Console.WriteLine($"\nParsed tone row: {string.Join(" ", (IEnumerable<Note>)notes)}");
                     return notes;
                 }
                 catch (ArgumentException ex)
