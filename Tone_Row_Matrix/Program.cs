@@ -302,7 +302,7 @@ namespace Tone_Row_Matrix
                         continue;
                     }
 
-                    Console.WriteLine($"\nParsed tone row: {string.Join(" ", (IEnumerable<Note>)notes)}");
+                    Console.WriteLine($"\nParsed tone row: {string.Join(" ", notes)}");
                     return notes;
                 }
                 catch (ArgumentException ex)
