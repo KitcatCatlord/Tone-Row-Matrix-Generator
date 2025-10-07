@@ -143,7 +143,7 @@ namespace Tone_Row_Matrix
             
             sb.AppendLine("# Twelve-Tone Matrix");
             sb.AppendLine();
-            sb.AppendLine($"**Prime Row (P0):** {string.Join(" ", (IEnumerable<Note>)_originalRow)}");
+            sb.AppendLine($"**Prime Row (P0):** {string.Join(" ", _originalRow)}");
             sb.AppendLine();
 
             sb.Append("|   |");
